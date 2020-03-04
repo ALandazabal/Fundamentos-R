@@ -18,4 +18,3 @@ ggplot(orangeec, aes(x=Strong_economy, y=V2, fill=Strong_economy))+
   theme(panel.background = element_blank(), 
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())
-

@@ -1,0 +1,44 @@
+---
+title: "Economía Naranja"
+author: "Angelica Landazabal"
+date: "3/4/2020"
+output: html_document
+---
+
+```{r}
+orangeec <- read.csv("C:/Users/Usuario/Desktop/Platzi/Fundamentos de R/orangeec.csv")
+data(orangeec)
+summary(orangeec)
+```
+
+PArece que hay correlaci{on entre aporte de economía naranja al pib y la tasa de desempleo
+```{r}
+pairs(orangeec[,6:10])
+```
+
+```{r}
+library(ggplot2)
+```
+
+```{r}
+ggplot()+geom_histogram(data=mtcars,
+                        aes(x=hp), fill="blue", color="red",
+                        binwidth = 20)+
+  labs(x="Caballos de fuerza", y="Cantidad de carros",
+       title="Caballos de fuerza en carros seleccionados")+
+  xlim(c(80,280))+
+  theme(legend.position = "none")+
+  theme(panel.background = element_blank(), panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+```
+```{r}
+library(dplyr)
+```
+
+```{r}
+
+```
+
+
+
+

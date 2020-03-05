@@ -23,23 +23,23 @@ mtcars <- mtcars %>%
 
 #
 orangeec <- orangeec %>%
-  mutate(Crecimiento_GDP = ifelse(V4 >= 2.5,
+  mutate(Crecimiento_GDP = ifelse(GDP.Growth.porcentaje >= 2.5,
                                   "2.5% ó más", "Menos 2.5%"))
 
 orangeec <- orangeec %>%
-  mutate(Anaranjados = ifelse(V6 >= 2.5,
+  mutate(Anaranjados = ifelse(Creat.Ind.porcentaje.GDP >= 2.5,
                                   "Más anaranjados", "Menos anaranjados"))
 
 #Ranking
 orangeec %>%
-  arrange(desc(V6))
+  arrange(desc(Creat.Ind.porcentaje.GDP))
 
 TopNaranjas <- orangeec %>%
-  filter(V1 %in% c("Mexico", "Panama", "Argentina", 
+  filter(Country %in% c("Mexico", "Panama", "Argentina", 
                         "Colombia", "Brazil"))
 
 TopNaranjas
 
 #
 TopNaranjas %>%
-  arrange(desc(V6))
+  arrange(desc(Creat.Ind.porcentaje.GDP))

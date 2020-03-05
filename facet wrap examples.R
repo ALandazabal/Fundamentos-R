@@ -22,7 +22,7 @@ ggplot(mtcars, aes(x=cyl, y=mpg, size=Peso_kilos))+
 
 #orangeec
 TopNaranjas <- orangeec %>%
-  filter(V1 %in% c("Mexico", "Panama", "Argentina", 
+  filter(Country %in% c("Mexico", "Panama", "Argentina", 
                    "Colombia", "Brazil", "Paraguay"))
 
 TopNaranjas
@@ -33,13 +33,14 @@ ggplot(TopNaranjas, aes(x=V10, V5, size=V2))+
 
 ggplot(TopNaranjas, aes(x=V13, V6, size=V8))+
   geom_point()+
-  facet_wrap(~V1)
+  facet_wrap(~Country)
 
 #
 myColors <- brewer.pal(9,"Reds")
 
-ggplot(TopNaranjas, aes(x=V10, V2, fill=V6))+
+ggplot(TopNaranjas, aes(x=Internet.penetration.porcentaje.population,
+                        GDP.PC, fill=Creat.Ind.porcentaje.GDP))+
   geom_tile()+
-  facet_wrap(~V1)+
+  facet_wrap(~Country)+
   scale_fill_gradientn(colors=myColors)
 

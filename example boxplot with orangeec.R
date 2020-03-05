@@ -1,16 +1,16 @@
 #Working with orangeec
 
 #
-economy <- mean(orangeec$V2)
+economy <- mean(orangeec$GDP.PC)
 economy
 
 #???
 orangeec <- orangeec %>%
-  mutate(Strong_economy = ifelse(V2 < economy,
+  mutate(Strong_economy = ifelse(GDP.PC < economy,
                                 "Por debajo promedio pib per capita",
                                  "Sobre Arriba promedio pib per cápita"))
 
-ggplot(orangeec, aes(x=Strong_economy, y=V2, fill=Strong_economy))+
+ggplot(orangeec, aes(x=Strong_economy, y=GDP.PC, fill=Strong_economy))+
   geom_boxplot(alpha=0.4)+
   labs(x="Tipo de paìs", y="Aporte economía naranja en pib paises latam con alto y bajo pib per cápita",
        title="Aporte economía naranja al pib")+

@@ -24,12 +24,30 @@ ggplot()+geom_histogram(data=mtcars,
 
 
 
+ggplot()+geom_histogram(data=mtcars,
+                        aes(x=cyl), fill="blue", color="red",
+                        binwidth = 1)+
+  labs(x="Caballos de fuerza", y="Cantidad de carros",
+       title="Caballos de fuerza en carros seleccionados")+
+  xlim()+
+  theme(legend.position = "none")+
+  theme(panel.background = element_blank(), panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+
 ggplot()+geom_histogram(data=orangeec,
                         aes(x=V2), fill="red", color="yellow",
                         binwidth = 5)+
   labs(x="Penetración internet(%) pobación", y="Cantidad de paises",
        title="Penetración de internet en paises latam")+
   scale_x_continuous(breaks = seq(40,100,5))+
+  theme(legend.position = "none")+
+  theme(panel.background = element_blank(), 
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+
+ggplot()+geom_histogram(data=orangeec,
+                        aes(x=V6), fill="red", color="yellow",
+                        binwidth = 1)+
   theme(legend.position = "none")+
   theme(panel.background = element_blank(), 
         panel.grid.major = element_blank(),

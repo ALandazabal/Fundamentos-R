@@ -12,3 +12,9 @@ plot(orangeec$V8 ~ orangeec$V13,
      xlab="Inversión educación (%PIB)",
      ylab= "Desempleo",
      main="Relación inversión en educación y desempleo")
+
+
+plot(orangeec$V8 ~ orangeec$V13,
+     xlab="Inversión educación (%PIB)",
+     ylab= "Desempleo",
+     main="Relación inversión en educación y desempleo")

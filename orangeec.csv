@@ -1,4 +1,4 @@
-Country,GDP PC,GDP US bill,GDP Growth %,Services % GDP,Creat Ind % GDP,Inflation,Unemployment,% pop below poverty line,Internet penetration % population,Median age,% pop 25-54,Education invest % GDP
+Country,GDP.PC,GDP.US.bill,GDP.Growth.porcentaje,Services.porcentaje.GDP,Creat.Ind.porcentaje.GDP,Inflation,Unemployment,porcentaje.pop.below.poverty.line,Internet.penetration.porcentaje.population,Median.age,porcentaje.pop.25-54,Education.invest.porcentaje.GDP
 Argentina,20900,637.7,2.9,60.9,3.8,25.7,8.1,25.7,93.1,31.7,39.38,5.9
 Belize,8300,1854,0.8,62.2,,1.1,10.1,41,52.3,22.7,36.62,7.4
 Bolivia,7500,37.1,4.2,50,,2.8,4,38.6,78.6,24.3,37.48,7.3
